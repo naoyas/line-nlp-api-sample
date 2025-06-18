@@ -1,4 +1,4 @@
 fastapi
 uvicorn
 google-play-scraper
-fugashi
+janome
