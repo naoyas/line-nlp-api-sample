@@ -8,5 +8,14 @@ class AnalyzeRequest(BaseModel):
 
 @app.post("/analyze")
 def analyze_api(req: AnalyzeRequest):
-    result = f"アプリ「{req.app_name}」のネガポジ分析結果です！（仮）"
-    return {"result": result}
+    # 仮のNLP分析結果をここで返す
+    keywords_positive = ["使いやすい", "便利", "かわいい"]
+    keywords_negative = ["バグ", "遅い", "強制終了"]
+
+    result = {
+        "app_name": req.app_name,
+        "positive_keywords": keywords_positive,
+        "negative_keywords": keywords_negative
+    }
+
+    return result
